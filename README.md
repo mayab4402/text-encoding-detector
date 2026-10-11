@@ -41,3 +41,10 @@ handle that case, require a BOM upstream.
 A second edge: a file that carries a UTF-8 BOM but has a damaged body is still
 reported as `utf-8-bom`. The BOM is treated as the source's declared intent; we
 do not silently downgrade it.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
