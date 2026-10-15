@@ -1,6 +1,6 @@
 {
   "name": "text-encoding-detector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detects UTF-8, UTF-16, Latin1, and ASCII encoding of files by examining BOM and byte patterns.",
   "type": "module",
   "main": "src/index.js",
